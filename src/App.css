@@ -1,0 +1,62 @@
+.app{
+    background-image: url('./picture/day.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.app.night{
+    background-image: url('./picture/maxresdefault.jpg')
+}
+
+.circular {
+    text-align: center;
+}
+#outlined-search {
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: larger;
+    display: inline-block;
+    background-color: white;
+    
+}
+
+.state {
+    
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.time {
+    font-weight: bold;
+    
+    font-style: italic;
+    text-align: center;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.temp{
+    
+    background-color: aqua;
+    box-shadow: black;
+    position: relative;
+    display: inline-block;
+    padding: 15px 25px;
+    margin-left: 600px;
+    margin-top: 20px;
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+
+.text {
+    
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+}
