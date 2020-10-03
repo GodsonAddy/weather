@@ -16,7 +16,7 @@ const Forecast = () => {
     
     if (evt.key === "Enter") {
      setLoading(true);
-     fetch(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${query}&days=${10}`)
+     fetch(`//api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${query}&days=${10}`)
      .then(res => res.json())
      .then(res=> { 
         setCountry(res);
@@ -47,7 +47,7 @@ const Forecast = () => {
             <center >     
               <TextField  value={query} onChange={handleChange} onKeyPress={summer} 
                 id="outlined-search" label="Search..." type="search" variant="outlined"
-                autoComplete
+                autoComplete="true"
               />
             </center>
            
@@ -128,4 +128,4 @@ const Forecast = () => {
   )
 }
 
-export default Forecast
+export default Forecast;

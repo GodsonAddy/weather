@@ -28,23 +28,25 @@ const NavBar = ({history}) => {
   }
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar variant="dense">
-          
-          <Typography variant="h6" color="inherit" >
-            <Button onClick={handleClick} color="inherit">
-              Current Weather
-            </Button>
+    <React.Fragment>
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar variant="dense">
+            
+            <Typography variant="h6" color="inherit" >
+              <Button data-testid="button" onClick={handleClick} color="inherit">
+                Current Weather
+              </Button>
+            </Typography>
+            <Typography variant="h6" color="inherit" align="center" className={classes.root}>
+              <Button data-testid="buttons" onClick={submit} color="inherit">
+                Daily Forecast
+              </Button>
           </Typography>
-          <Typography variant="h6" color="inherit" align="center" className={classes.root}>
-            <Button onClick={submit} color="inherit">
-              Daily Forecast
-            </Button>
-        </Typography>
-        </Toolbar>
-      </AppBar>
-    </div>
+          </Toolbar>
+        </AppBar>
+      </div>
+    </React.Fragment>
   );
 }
 
