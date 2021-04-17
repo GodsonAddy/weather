@@ -21,5 +21,5 @@ jobs:
           heroku_email: "godsonaddy@yahoo.co.uk"
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "weatherappwrld"
-          remote_branch: "main"
+          remote_branch: "mastaer"
           healthcheck: "https://weatherappwrld.herokuapp.com"
