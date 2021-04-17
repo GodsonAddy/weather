@@ -35,7 +35,7 @@ const NavBar = ({history}) => {
             
             <Typography variant="h6" color="inherit" >
               <Button data-testid="button" onClick={handleClick} color="inherit">
-                Current Weather
+                Weather Now
               </Button>
             </Typography>
             <Typography variant="h6" color="inherit" align="center" className={classes.root}>
