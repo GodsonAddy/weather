@@ -1,0 +1,22 @@
+name: Docker
+on: [push]
+jobs:
+  # Run tests.
+  # See also https://docs.docker.com/docker-hub/builds/automated-testing/
+  build:
+    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node_version: ['8', '10', '12']
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_email: "godsonaddy@yahoo.co.uk"
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "weatherappwrld"
+          remote_branch: "master"
+          healthcheck: "https://weatherappwrld.herokuapp.com"
