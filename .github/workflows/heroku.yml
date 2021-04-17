@@ -1,5 +1,8 @@
 name: Docker
-on: [push]
+on: 
+    push:
+    branches:
+      - master
 jobs:
   # Run tests.
   # See also https://docs.docker.com/docker-hub/builds/automated-testing/
@@ -15,8 +18,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
-          heroku_email: "godsonaddy@yahoo.co.uk"
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "weatherappwrld"
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
           remote_branch: "master"
           healthcheck: "https://weatherappwrld.herokuapp.com"
